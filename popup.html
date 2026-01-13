@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            width: 300px;
+            padding: 15px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #333;
+            text-align: center;
+        }
+
+        .status-box {
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        #startBtn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        #startBtn:hover {
+            background-color: #45a049;
+        }
+
+        #stopBtn {
+            background-color: #f44336;
+            color: white;
+        }
+
+        #stopBtn:hover {
+            background-color: #da190b;
+        }
+
+        #statusText {
+            font-weight: bold;
+            color: #666;
+        }
+
+        .logs {
+            margin-top: 15px;
+            height: 200px;
+            overflow-y: auto;
+            background: #222;
+            color: #0f0;
+            font-family: monospace;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 11px;
+        }
+
+        .log-entry {
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>🍪 Cookies Farm</h2>
+
+    <div class="status-box">
+        <div>Status: <span id="statusText">Idle</span></div>
+    </div>
+
+    <div class="controls">
+        <button id="startBtn">Start Now</button>
+        <button id="stopBtn">Stop</button>
+    </div>
+
+    <div class="logs" id="logContainer">
+        <!-- Logs go here -->
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
